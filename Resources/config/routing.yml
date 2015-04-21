@@ -1,0 +1,20 @@
+MyAppBlogBundle_homepage:
+    pattern:  /{page}
+    defaults: { _controller: MyAppBlogBundle:Blog:index , page: 1 }
+    requirements:
+        page:  \d+
+MyAppBlogBundle_ajouter:
+    pattern:  /admin/ajouter-un-article
+    defaults: { _controller: MyAppBlogBundle:Blog:ajouter }
+MyAppBlogBundle_crud:
+    resource: "routing/article.yml"
+    prefix:   /crud
+MyAppBlogBundle_view:
+    pattern:  /voir/{title}
+    defaults:  { _controller: MyAppBlogBundle:Blog:view }  
+MyAppBlogBundle_cat:
+    pattern:  /Categories/{cat}-{page}
+    defaults:  { _controller: MyAppBlogBundle:Blog:categ , page: 1 }  
+MyAppBlogBundle_cv:
+    pattern:  /Resume
+    defaults:  { _controller: MyAppBlogBundle:Blog:resume }  

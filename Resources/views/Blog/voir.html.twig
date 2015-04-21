@@ -1,0 +1,56 @@
+{% extends "MyAppBlogBundle::layout.html.twig" %}
+{% block title %} {{ parent() }}-page d'accueil {% endblock %}
+{% block contents %}
+
+    <div class="articles">
+        <header>
+              <h3 class="titre_article">
+                  {{article.title}}
+               </h3>
+        </header>
+
+        <article class="article_cont">
+              <p>{{article.content|raw}}</p>
+        </article>
+        <footer>
+            <p>
+                <i class="date_creation">
+                   {{article.creationdate|date('d/m/y')}} at {{article.creationdate|date('H:i')}}
+                </i>
+
+            </p>
+        </footer>
+ </div>
+        {% if comments|length() >0 %}
+        <h2> {{comments|length()}} Commentaire(s)</h2>
+        {% endif %}
+        <div id="commentlist">
+        {% for comment in comments %}
+            <article class="entry">
+                 <div class="avatar"> 
+                    <img src="{{ asset('bundles/MyAppBlog/images/avatar.png') }}">
+                        <p class="author"><span class="name">{{comment.user}}</span>
+                        <time class="date">  {{comment.creationdate|date('d-m-y')}} a {{comment.creationdate|date('H:i')}} 
+                         </time></p></div>
+                 <div class="comment">
+                        <p>{{comment.content}}</p>
+                 </div>
+                 
+            
+          <div class="clear"></div>
+         </article>
+        {% endfor %}
+        </div>
+        <div id="comments">
+            <h2>Leave a comment</h2>
+             <p>
+               <form method="post" {{ form_enctype(form) }} id="commentform">
+            
+                     {{ form_widget(form) }}
+
+                <input type="submit" value="Send" />
+               </form>
+            </p>
+        </div>
+      
+{% endblock %}

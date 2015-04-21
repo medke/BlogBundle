@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>{% block title %} Mohamed KETTOUCH{% endblock %}</title>
+<link rel="stylesheet" href="{{ asset('bundles/MyAppBlog/css/style.css') }}"/>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script src="{{asset('bundles/MyAppBlog/js/belatedPNG.js')}}"></script>
+<script>
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+</head>
+<body>
+<div id="all_page">
+<section id="page">
+<div id="pagewrap">
+<section id="sidebar">
+<h2>Categories</h2>
+<ul>
+<li><a href="{{path('MyAppBlogBundle_cat',{'cat':'all'})}}">All</a></li>
+<li><a href="{{path('MyAppBlogBundle_cat',{'cat':'web'})}}">Web</a></li>
+<li><a href="{{path('MyAppBlogBundle_cat',{'cat':'graphics'})}}">Graphics</a></li>
+<li><a href="{{path('MyAppBlogBundle_cat',{'cat':'news'})}}">news</a></li>
+<li><a href="{{path('MyAppBlogBundle_cat',{'cat':'movies'})}}">Movies</a></li>
+
+</ul>
+
+</section>
+
+<section id="contents">
+
+<header id="mainheader">
+
+<h1>Mohamed Kettouch <span>Blog</span></h1>
+</header>
+<section id="main">
+
+    {% block contents %}
+
+    {% endblock %}
+</section>
+
+<footer id="pagefooter">
+<div class="footerwrap">
+<p class="siteinfo">
+
+2010 &copy; All Rights Reserved | Your Website Info and copyright information goes here.
+</p>
+</div>
+<div id="credits">
+  <a href="http://cssheaven.org" title="download quality website templates">Free Website Template by CSS Heaven</a></div>
+
+
+</footer>
+</section>
+<section id="social">
+<div id="socialwrap">
+
+
+<nav id="mainnav">
+<h2>Browse</h2>
+
+<ul>
+
+    <li><a href="{{ path('MyAppBlogBundle_homepage')}}">Home</a></li>
+    <li><a href="{{ path('MyAppBlogBundle_cv')}}">Resume(CV)</a></i>
+    <li><a href="single.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<section id="tweets">
+<h2>tweets</h2>
+<ul>
+	<li class="firsttwt"> <span>Nam vehicula vehicula malesuada. Quisque euismod consequat dolor, non posuere erat ultrices eget</span>
+    <span class="twtrlink"><a href="#">View Tweet</a></span>
+    </li>
+    <li> <span>Nam vehicula vehicula malesuada. Quisque euismod consequat dolor, non posuere erat ultrices eget</span>
+    <span class="twtrlink"><a href="#">View Tweet</a></span></li>
+    <li> <span>Nam vehicula vehicula malesuada. Quisque euismod consequat dolor, non posuere erat ultrices eget</span>
+    <span class="twtrlink"><a href="#">View Tweet</a></span>
+    </li>
+    <li> <span>Nam vehicula vehicula malesuada. Quisque euismod consequat dolor, non posuere erat ultrices eget</span>
+    <span class="twtrlink"><a href="#">View Tweet</a></span></li>
+
+    
+</ul>
+</section>
+<section id="sociallinks">
+<h2>Social</h2>
+<a href="https://twitter.com/Mkettouch" title="twitter"><img src="{{asset('bundles/MyAppBlog/images/socialicons/twitter.png')}}" width="32" height="32" alt="twitter"></a>
+<a href="http://www.stumbleupon.com/stumbler/Mkettouch/"title="stumbleupon"><img src="{{asset('bundles/MyAppBlog/images/socialicons/stumbleupon.png')}}" width="32" height="32" alt="stumbleupon"></a>
+<a href="http://www.flickr.com/people/69331495@N08/"title="flickr"><img src="{{asset('bundles/MyAppBlog/images/socialicons/flickr.png')}}" width="32" height="32" alt="flickr"></a>
+<a href="mailto:algerian.m1@gmail.com"title="mail mee"><img src="{{asset('bundles/MyAppBlog/images/socialicons/yahoo.png')}}" width="32" height="32" alt="rss"></a></section>
+</div>
+</section>
+
+<div class="clear"></div>
+</div>
+</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+comments:
+    pattern:  /
+    defaults: { _controller: "MyAppBlogBundle:Comments:index" }
+
+comments_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MyAppBlogBundle:Comments:show" }
+
+comments_new:
+    pattern:  /new
+    defaults: { _controller: "MyAppBlogBundle:Comments:new" }
+
+comments_create:
+    pattern:  /create
+    defaults: { _controller: "MyAppBlogBundle:Comments:create" }
+    requirements: { _method: post }
+
+comments_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MyAppBlogBundle:Comments:edit" }
+
+comments_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MyAppBlogBundle:Comments:update" }
+    requirements: { _method: post }
+
+comments_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MyAppBlogBundle:Comments:delete" }
+    requirements: { _method: post }

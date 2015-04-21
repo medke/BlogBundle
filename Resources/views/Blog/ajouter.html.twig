@@ -1,0 +1,10 @@
+{% extends "MyAppBlogBundle::layout.html.twig" %}
+{% block title %}{{parent()}} - ajouter un article {% endblock %}
+{% block contents %}
+<form method="post" {{ form_enctype(form) }}>
+	
+	{{ form_widget(form) }}
+
+	<input type="submit" />
+</form>
+{% endblock%}

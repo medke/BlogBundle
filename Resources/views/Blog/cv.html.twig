@@ -1,0 +1,33 @@
+{% extends "MyAppBlogBundle::layout.html.twig" %}
+{% block title %} {{ parent() }}- Resume {% endblock %}
+{% block contents %}
+<div id="resume">
+<h3 style="display:inline;">actually : </h3> <p style="display:inline;">Etudiant (First year master intelligent computer systme)<br/><br/></p>
+<h3 style="display:inline;">Formation : </h3><p style="display:inline;">bachelor in academic computer science<br/><br/></p>
+<h3>competencies</h3>
+<table>
+<tbody>
+
+<tr><td class="type_td">Markup languages​​</td><td></td></tr>
+<tr><td>HTML / CSS  </td> <td><img alt="maitrise" src="{{asset('bundles/MyAppBlog/images/niveau/4.png')}}"/></td></tr>
+<tr><td>HTML5 / CSS3 </td><td><img alt="confirme" src="{{asset('bundles/MyAppBlog/images/niveau/3.png')}}"/></td></tr>
+<tr><td class="type_td">Server languages ​​and frameworks</td><td></td></tr>
+<tr><td>PHP </td><td>        <img alt="confirme" src="{{asset('bundles/MyAppBlog/images/niveau/3.png')}}"/></td></tr>
+<tr><td>Symfony2 </td><td>   <img alt="base" src="{{asset('bundles/MyAppBlog/images/niveau/2.png')}}"/></td></tr>
+<tr><td class="type_td">client languages ​​and frameworks</td><td></td></tr>
+<tr><td>Javascript </td><td> <img alt="base" src="{{asset('bundles/MyAppBlog/images/niveau/2.png')}}"/></td></tr>
+<tr><td>JQuery </td><td>     <img alt="maitrise" src="{{asset('bundles/MyAppBlog/images/niveau/1.png')}}"/></td></tr>
+<tr><td class="type_td">DataBase and ORM's</td><td></td></tr>
+<tr><td>SQL </td><td>        <img alt="confirme" src="{{asset('bundles/MyAppBlog/images/niveau/3.png')}}"/></td></tr>
+<tr><td>Doctrine2 </td><td>  <img alt="maitrise" src="{{asset('bundles/MyAppBlog/images/niveau/1.png')}}"/></td></tr>
+<tr><td class="type_td">software languages</td><td></td></tr>
+<tr><td>Java </td><td> <img alt="confirme" src="{{asset('bundles/MyAppBlog/images/niveau/3.png')}}"/></td></tr>
+<tr><td>C++ </td><td> <img alt="base" src="{{asset('bundles/MyAppBlog/images/niveau/2.png')}}"/></td></tr>
+<tr><td class="type_td">Write and Speak and Read</td><td></td></tr>
+<tr><td>Arabic </td><td> <img alt="maitrise" src="{{asset('bundles/MyAppBlog/images/niveau/4.png')}}"/></td></tr>
+<tr><td>French</td><td>  <img alt="confirme" src="{{asset('bundles/MyAppBlog/images/niveau/3.png')}}"/></td></tr>
+<tr><td>English </td><td> <img alt="base" src="{{asset('bundles/MyAppBlog/images/niveau/2.png')}}"/></td></tr>
+</tbody>
+</table>
+</div>
+{% endblock %}

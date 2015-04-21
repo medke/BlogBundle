@@ -1,0 +1,32 @@
+{% extends "MyAppBlogBundle::layout.html.twig" %}
+{% block title %} {{ parent() }}-page d'accueil {% endblock %}
+{% block contents %}
+
+{% for article in articles %}
+<article class="post">
+   <header>
+<h2><a href="{{ path("MyAppBlogBundle_view",{'title': article.title|replace({' ': '-'}) }) }}">{{article.title}}</a></h2>
+<p class="postinfo">category: {{article.categorie}} |  {{article.creationdate|date('d/m/y')}} at {{article.creationdate|date('H:i')}}  |  <a href="{{ path("MyAppBlogBundle_view",{'title': article.title|replace({' ': '-'}) }) }}">{{article.comments|length()}} Comments</a></p>
+
+
+    </header>
+
+<section class="entry">
+
+             <p>{{article.content|raw}}</p>
+</section>
+</article>
+ {% endfor %}   
+<section class="pagination">
+<p>
+{% for nbre in nbre_page  %} 
+
+{% if nbre == page_now  %} 
+<strong>{{nbre}}</strong>
+{%else%}
+<a href="{{ path("MyAppBlogBundle_homepage",{'page': nbre }) }}">{{nbre}}</a>
+{% endif %}
+{% endfor %}
+<p>
+</section>
+{% endblock %}
